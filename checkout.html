@@ -9,6 +9,7 @@
 	<link rel="icon" type="image/png" href="./devchallenges.png" />
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,100,1,200" />
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<script src="./script.js"></script>
 </head>
 <body>
 	<h1>Checkout</h1>
@@ -20,13 +21,13 @@
 			<label for="email">E-mail</label>
 			<div class="input">
 				<span class="material-symbols-outlined">mail</span>
-				<input type="email" id="email" placeholder="Enter your email...">
+				<input type="email" id="email" placeholder="Enter your email..." required>
 			</div>
 			
 			<label for="phone">Phone</label>
 			<div class="input">
 				<span class="material-symbols-outlined">phone</span>
-				<input type="tel" id="phone" placeholder="Enter your phone...">
+				<input type="tel" id="phone" placeholder="Enter your phone..." required>
 			</div>
 
 			<h2>Shipping address</h2>
@@ -34,19 +35,19 @@
 			<label for="fullname">Full name</label>
 			<div class="input">
 				<span class="material-symbols-outlined">account_circle</span>
-				<input type="text" id="fullname" placeholder="Your full name..">
+				<input type="text" id="fullname" placeholder="Your full name.." required>
 			</div>
 			
 			<label for="address">Address</label>
 			<div class="input">
 				<span class="material-symbols-outlined">home</span>
-				<input type="text" id="address" placeholder="Your address..">
+				<input type="text" id="address" placeholder="Your address.." required>
 			</div>
 
 			<label for="city">City</label>
 			<div class="input">
 				<span class="material-symbols-sharp">location_city</span>
-				<input type="text" id="city" placeholder="Your city..">
+				<input type="text" id="city" placeholder="Your city.." required>
 			</div>
 
 			<div class="double">
@@ -55,11 +56,12 @@
 					<div class="demi">
 						<span class="material-symbols-sharp">public</span>
 						<select id="country">
-							<option>Your country..</option>
-							<option>France</option>
-							<option>Angletaire</option>
+							<option value="">Your country..</option>
+							<option value="french">France</option>
+							<option value="english">Angletaire</option>
+							<option value="italie">Italia</option>
 						</select>
-						<span class="material-symbols-sharp" id="select" >expand_more</span>
+						<span class="material-symbols-sharp" id="select">expand_more</span>
 					</div>
 				</div>
 
@@ -67,7 +69,7 @@
 					<label for="postal">Postal Code</label>
 					<div class="demi">
 						<span class="material-symbols-sharp">markunread_mailbox</span>
-						<input type="text" id="postal" placeholder="Your postal code..">
+						<input type="text" id="postal" placeholder="Your postal code.." required>
 					</div>
 				</div>
 			</div>
@@ -77,7 +79,7 @@
 				<p>Save this information for next time</p>
 			</div>
 
-			<input type="submit" value="Continue">
+			<input type="submit" value="Continue" onclick="disableButton(this)">
 		</form>
 
 		<div class="checkout">
@@ -87,13 +89,13 @@
 				<div class="elements">
 					<h3>Vintage Backbag</h3>
 					<div class="prices">
-						<p class="price_after_remise">$54.99</p>
+						<p class="price_after_remise" id="price1">$54.99</p>
 						<p class="price">$94.99</p>
 					</div>
 					<div class="quantity">
-						<span class="material-symbols-sharp">remove</span>
-						<p>1</p>
-						<span class="material-symbols-sharp">add</span>
+						<span class="material-symbols-sharp" onclick="removeItem('item1', 'price1')">remove</span>
+						<p id="item1">1</p>
+						<span class="material-symbols-sharp" onclick="addItem('item1', 'price1')">add</span>
 					</div>
 				</div>
 			</div>
@@ -103,13 +105,13 @@
 				<div class="elements">
 					<h3>Levi Shoes</h3>
 					<div class="prices">
-						<p class="price_after_remise">$74.99</p>
+						<p class="price_after_remise" id="price2">$74.99</p>
 						<p class="price">$124.99</p>
 					</div>
 					<div class="quantity">
-						<span class="material-symbols-sharp">remove</span>
-						<p>1</p>
-						<span class="material-symbols-sharp">add</span>
+						<span class="material-symbols-sharp" onclick="removeItem('item2', 'price2')">remove</span>
+						<p id="item2">1</p>
+						<span class="material-symbols-sharp" onclick="addItem('item2', 'price2')">add</span>
 					</div>
 				</div>
 			</div>
@@ -125,7 +127,7 @@
 
 			<div class="end-checkout">
 				<h5>Total</h5>
-				<h6>$148.98</h6>
+				<h6 id="total">$148.98</h6>
 			</div>
 
 		</div>

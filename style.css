@@ -247,3 +247,19 @@ form input[type=submit] {
 	border: none;
 	margin-bottom: 20%;
 }
+
+.demi {
+	position: relative;
+}
+
+.demi select {
+	z-index: 1;
+	cursor: pointer;
+	background-color: transparent;
+}
+
+#select {
+	position: absolute;
+	z-index: 0;
+	right: 5%
+}

@@ -263,3 +263,18 @@ form input[type=submit] {
 	z-index: 0;
 	right: 5%
 }
+
+@media (max-width: 800px) {
+	.content {
+		flex-direction: column-reverse;
+		padding-top: 2%;
+	}
+
+	.input { width: auto; }
+
+	.double { width: auto; }
+
+	.double div { width: 90%; }
+
+	form input[type=submit] { margin-right: 0; }
+}

@@ -43,6 +43,7 @@ h2 {
 	font-size: 18px;
 	line-height: 22px;
 	color: #333333;
+	padding: 2% 0 2% 0;
 }
 
 label {
@@ -75,18 +76,20 @@ span {
 	background: #F2F2F2;
 	border-radius: 12px;
 	padding: 2%;
+	height: 100%;
 }
 
 .article {
 	display: flex;
 	gap: 25px;
 	padding: 2% 0 2% 0;
+	position: relative;
 }
 
 .article img {
 	display: block;
 	border-radius: 15px;
-	max-width: 136px;
+	max-width: 42%;
 }
 
 .elements {
@@ -126,7 +129,8 @@ span {
 	width: 134.25px;
 	height: 52px;
 	align-items: center;
-	margin-top: 40px;
+	position: absolute;
+	bottom: 8px;
 }
 
 .quantity p {
@@ -135,11 +139,12 @@ span {
 	color: #333333;
 }
 
-.quantity span {
+.quantity span, #select {
 	background: #E0E0E0;
 	border-radius: 4px;
 	height: 25px;
 	width: 25px;
+	cursor: pointer;
 }
 
 .line {
@@ -159,9 +164,40 @@ h6 {
 	color: #333333;
 }
 
-.input {
+.input, .demi {
 	border: 1px solid #828282;
 	border-radius: 12px;
+	padding: 2%;
+	margin-top: 5px;
+}
+
+.input {
+	margin-bottom: 2%;
+	display: flex;
+	gap: 10px;
+	width: 80%;
+}
+
+.double {
+	display: flex;
+	width: 89%;
+	margin-bottom: 2%;
+}
+
+.input input, .demi input, .demi select {
+	width: 100%;
+	border: none;
+	outline: none;
+}
+
+.double div{
+	width: 80%;
+}
+
+.demi {
+	display: flex;
+	padding: 4%;
+	gap: 10px;
 }
 
 .content {
@@ -178,4 +214,36 @@ h6 {
 
 .checkout .line:nth-child(3) {
 	margin-top: 25%;
+}
+
+form {
+	width: 100%;
+}
+
+.save {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	padding-bottom: 2%;
+}
+
+.save input {
+	height: 20px;
+	width: 20px;
+}
+
+select {
+	-webkit-appearance: none;
+}
+
+form input[type=submit] {
+	background: #F2994A;
+	border-radius: 12px;
+	width: 166px;
+	height: 54px;
+	float: right;
+	margin-right: 16%;
+	color: white;
+	border: none;
+	margin-bottom: 20%;
 }

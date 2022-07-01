@@ -17,57 +17,62 @@
 		<form>
 			<h2>Contact infomation</h2>
 			
+			<label for="email">E-mail</label>
 			<div class="input">
-				<label for="email">E-mail</label>
 				<span class="material-symbols-outlined">mail</span>
 				<input type="email" id="email" placeholder="Enter your email...">
 			</div>
 			
-			<div>
-				<label for="phone">Phone</label>
+			<label for="phone">Phone</label>
+			<div class="input">
 				<span class="material-symbols-outlined">phone</span>
 				<input type="tel" id="phone" placeholder="Enter your phone...">
 			</div>
 
 			<h2>Shipping address</h2>
 			
-			<div>
-				<label for="fullname">Full name</label>
+			<label for="fullname">Full name</label>
+			<div class="input">
 				<span class="material-symbols-outlined">account_circle</span>
 				<input type="text" id="fullname" placeholder="Your full name..">
 			</div>
 			
-			<div>
-				<label for="address">Address</label>
+			<label for="address">Address</label>
+			<div class="input">
 				<span class="material-symbols-outlined">home</span>
 				<input type="text" id="address" placeholder="Your address..">
 			</div>
 
-			<div>
-				<label for="city">City</label>
+			<label for="city">City</label>
+			<div class="input">
 				<span class="material-symbols-sharp">location_city</span>
 				<input type="text" id="city" placeholder="Your city..">
 			</div>
 
-			<div>
-				<label for="country">Country</label>
-				<span class="material-symbols-sharp">public</span>
-				<select name="pets" id="pet-select">
-					<option value="">Your country..</option>
-					<option value="french">France</option>
-					<option value="english">Angletaire</option>
-				</select>
+			<div class="double">
+				<div>
+					<label for="country">Country</label>
+					<div class="demi">
+						<span class="material-symbols-sharp">public</span>
+						<select id="country">
+							<option>Your country..</option>
+							<option>France</option>
+							<option>Angletaire</option>
+						</select>
+						<span class="material-symbols-sharp" id="select">expand_more</span>
+					</div>
+				</div>
+
+				<div>
+					<label for="postal">Postal Code</label>
+					<div class="demi">
+						<span class="material-symbols-sharp">markunread_mailbox</span>
+						<input type="text" id="postal" placeholder="Your postal code..">
+					</div>
+				</div>
 			</div>
 
-			<div>
-				<label for="postal">Postal Code</label>
-				<span class="material-symbols-sharp">
-					markunread_mailbox
-					</span>
-				<input type="text" id="postal" placeholder="Your postal code..">
-			</div>
-
-			<div>
+			<div class="save">
 				<input type="checkbox">
 				<p>Save this information for next time</p>
 			</div>
@@ -125,6 +130,7 @@
 
 		</div>
 	</div>
+	
 	<footer>
 		created by <a href="https://github.com/louchebem06" target="_blank">louchebem06</a> - devChallenges.io
 	</footer>
